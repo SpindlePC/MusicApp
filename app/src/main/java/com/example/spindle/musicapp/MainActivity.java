@@ -1,9 +1,12 @@
 package com.example.spindle.musicapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.spindle.musicapp.topsongs.TopSongsActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +20,9 @@ public class MainActivity extends AppCompatActivity {
         bTopSongs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent (MainActivity.this,
+                        TopSongsActivity.class);
+                startActivity(intent);
 
             }
         });
